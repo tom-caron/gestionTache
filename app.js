@@ -47,7 +47,6 @@ app.get('/tasks/:id/edit', async (req, res) => {
   }
 });
 
-
 app.post('/tasks/:id/complete', async (req, res) => {
   try {
     await markTaskAsCompleted(req.params.id);

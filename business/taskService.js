@@ -28,8 +28,6 @@ const getSortCriteria = (sortBy, sortOrder) => {
   }
 };
 
-
-
 const addTask = async (task) => {
   return await Task.create(task);
 };
