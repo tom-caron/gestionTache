@@ -15,19 +15,6 @@ const getTasks = async (filter = {}, sortBy = 'priorite', sortOrder = 'ASC') => 
   });
 };
 
-const getSortCriteria = (sortBy, sortOrder) => {
-  switch (sortBy) {
-    case 'priorite':
-      return [['priorite', sortOrder]];
-    case 'statut':
-      return [['statut', sortOrder]];
-    case 'date':
-      return [['date_limite', sortOrder]];
-    default:
-      return [['priorite', 'ASC']]; // Tri par priorité par défaut
-  }
-};
-
 const addTask = async (task) => {
   return await Task.create(task);
 };
